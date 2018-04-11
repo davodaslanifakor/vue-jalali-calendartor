@@ -4,7 +4,7 @@
       <div class="el2full" >
         <app-sidebar/>
         <div class="main-layout">
-          <router-view></router-view>
+          <nuxt/>
         </div>
         <app-footer/>
       </div>
@@ -12,8 +12,8 @@
   </div>
 </template>
 <script>
-import sidebar from './components/sidebar.vue'
-import footer from './components/footer.vue'
+import sidebar from '~/components/sidebar.vue'
+import footer from '~/components/footer.vue'
 export default {
  layout: 'default',
  components: {
@@ -22,13 +22,13 @@ export default {
 },
 
 data(){
-    return {
-      defaultHeight:'700px'
-    }
-  },
-  mounted(){
-    // this.defaultHeight = window.innerHeight - 338   +'px'
+  return {
+    defaultHeight:'700px'
   }
+},
+mounted(){
+  // this.defaultHeight = window.innerHeight - 338   +'px'
+}
 }
 
 </script>

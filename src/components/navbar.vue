@@ -89,7 +89,7 @@ export default {
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 9999999999;
+	z-index: 9;
 	transition: all .4s cubic-bezier(0, -0.22, 0.18, 1.06);
 	-webkit-transition: all .4s cubic-bezier(0, -0.22, 0.18, 1.06);
 	-moz-transition: all .4s cubic-bezier(0, -0.22, 0.18, 1.06);

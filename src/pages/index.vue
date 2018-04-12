@@ -1,6 +1,6 @@
 <template>
  <div class="home">
-
+        <router-view></router-view>
  </div>
 </template>
 
@@ -19,6 +19,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style style="less">
+  .home{
+    padding-top: 60px;
+  }
 </style>

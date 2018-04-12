@@ -53,7 +53,7 @@ footer {
   }
   .social {
     text-align: center;
-    background: @blue;
+    background: @green;
     ul {
       li {
         padding: 10px 0;
@@ -68,7 +68,7 @@ footer {
           -moz-border-radius: 4px;
           -webkit-border-radius: 4px;
           -ms-border-radius: 4px;
-          color: #0b1425;
+          color: #fff;
           line-height: 20px;
           font-size: 12px;
           &:before {

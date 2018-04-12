@@ -7,12 +7,15 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var babelPolyfill = require("babel-polyfill");
 var isProduction = process.env.NODE_ENV === 'production';
 var myfilename;
+// /config/dev.env.js
 
-
+// /config/prod.env.js
 if (isProduction) {
     myfilename = '[name].[hash].js'
+    
 } else {
     myfilename = '[name].js'
+    
 }
 module.exports = {
     entry: {

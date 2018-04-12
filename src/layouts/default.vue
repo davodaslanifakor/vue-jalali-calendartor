@@ -23,7 +23,7 @@ export default {
 
 data(){
     return {
-      defaultHeight:'700px'
+      defaultHeight:'450px'
     }
   },
   mounted(){
@@ -53,6 +53,6 @@ body {
 }
 .main-layout{
   padding: 10px 0;
-  min-height: 1035px;
+  min-height: 750px;
 }
 </style>

@@ -48,7 +48,7 @@ a{
   height: 250px;
   width: 100%;
   max-width: 500px;
-  background: #dfe9fe;
+  background:@green;
 }
 
 
@@ -79,21 +79,29 @@ a{
 }
 
 .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.3);
+    // background-color: rgba(48, 121, 244,.3);
+    background-color: @green;
+    opacity: 0.3;
 }
 
 .vb > .vb-dragger:hover > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.5);
+    // background-color: rgba(48, 121, 244,.5);
+    background-color: @green;
+    opacity: 0.5;
     margin: 0px;
     height: 100%;
 }
 
 .vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.5);
+    // background-color: rgba(48, 121, 244,.5);
+    background-color: @green;
+    opacity: 0.5;
     margin: 0px;
     height: 100%;
 }
 
 .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
-    background-color: rgba(48, 121, 244,.5);
+    // background-color: rgba(48, 121, 244,.5);
+    background-color: @green;
+    opacity: 0.3;
 }

@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<router-link to="/" class="logo">
-						<!-- <img src="~/static/img/Logo1.png"  alt="طبینجا | Tebinja  | سامانه جامع پزشکی و سلامت"> -->
+						<img src="../assets/logo.png"  alt="#">
 					</router-link>
 					<ul  class="navigation" :class="{open:isNavbar}">
 						<li v-for="(item,index) in navbar.listNavbar" :key="index">	
@@ -24,11 +24,11 @@
 						<span><a href="/app/login" class=""><i class="mdi mdi-account-outline"></i> <span>ثبت نام / ورود</span></a></span>
 					</div>	
 					<!-- v-if="login" -->
-					<div  class="avatar" :class="{open:isAvatar}" >
+					<div  class="avatar" :class="{open:isAvatar}" v-else>
 						<router-link to="/">
-							<span>fullname</span>
+							<span>full name</span>
 							<figure>
-								<!-- <img src="~/static/img/pattient.png" class="img-circle"> -->
+								<img src="../assets/img/male.png" class="img-circle">
 							</figure>
 						</router-link>
 						<i class="mdi mdi-chevron-down" @click="toggle('isAvatar')"></i>
@@ -278,29 +278,20 @@ export default {
 
 	}
 	.logo {
-
 		transition: all .4s linear;
-
 		-webkit-transition: all .4s linear;
-
 		-moz-transition: all .4s linear;
-
 		-ms-transition: all .4s linear;
-
 		-o-transition: all .4s linear;
-
 		display: block;
-
 		float: right;
-
 		line-height: 100px;
-
 		padding: 0;
-
 		line-height: 80px;
+		width: 110px;
 
 		img {
-
+			margin-top: 5px;
 			width: 100%;
 
 		}

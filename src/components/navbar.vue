@@ -11,12 +11,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<nuxt-link to="/" class="logo">
+					<router-link to="/" class="logo">
 						<!-- <img src="~/static/img/Logo1.png"  alt="طبینجا | Tebinja  | سامانه جامع پزشکی و سلامت"> -->
-					</nuxt-link>
+					</router-link>
 					<ul  class="navigation" :class="{open:isNavbar}">
-						<li v-for="item in listNavbar">	
-							<nuxt-link :to="item.path">{{item.text}}</nuxt-link>
+						<li v-for="(item,index) in navbar.listNavbar" :key="index">	
+							<router-link :to="item.path">{{item.text}}</router-link>
 						</li>
 					</ul>
 					<!-- v-if="!login" -->
@@ -25,20 +25,20 @@
 					</div>	
 					<!-- v-if="login" -->
 					<div  class="avatar" :class="{open:isAvatar}" >
-						<nuxt-link to="/">
+						<router-link to="/">
 							<span>fullname</span>
 							<figure>
 								<!-- <img src="~/static/img/pattient.png" class="img-circle"> -->
 							</figure>
-						</nuxt-link>
+						</router-link>
 						<i class="mdi mdi-chevron-down" @click="toggle('isAvatar')"></i>
 						<div class="list-menu" :class="{open:isAvatar}">
 							<ul>
-								<li v-for="(item , i) in listAvatar" :class="{divider:item.divider}" @click="toggle('isAvatar')">
-									<nuxt-link :to="item.path" exact>
+								<li v-for="(item , i) in navbar.listAvatar" :key="i" :class="{divider:item.divider}" @click="toggle('isAvatar')">
+									<router-link :to="item.path" exact>
 										<i class="mdi" :class="item.icon"></i>
 										{{item.text}}
-									</nuxt-link>
+									</router-link>
 								</li>
 							</ul>
 						</div>
@@ -50,15 +50,19 @@
 	</div>
 </template>
 <script>
+import { mapState , mapActions } from "vuex";
 export default {
 	name: 'navbar',
 	computed: {
-		listNavbar () {
-			return this.$store.state.navbar.listNavbar
-		},
-		listAvatar () {
-			return this.$store.state.navbar.listAvatar
-		},
+
+    ...mapState(["navbar"])
+		
+		// listNavbar () {
+		// 	return this.$store.state.navbar.listNavbar
+		// },
+		// listAvatar () {
+		// 	return this.$store.state.navbar.listAvatar
+		// },
 		
 	},
 	data () {
@@ -76,7 +80,7 @@ export default {
 </script>
 
 <style lang="less">
-@import (reference) "../static/css/variable.less";
+@import (reference) "../assets/css/variable.less";
 .navbarnav {
 	display: block;
 	height: 60px;
@@ -168,7 +172,7 @@ export default {
 
 			}
 		}
-		.nuxt-link-active {
+		.router-link-active {
 			&:before {
 				transform: scale3d(1, 1, 1);
 				transition: transform 0.5s;

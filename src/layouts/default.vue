@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import sidebar from '~/components/sidebar.vue'
+import sidebar from '~/components/navbar.vue'
 import footer from '~/components/footer.vue'
 export default {
  layout: 'default',

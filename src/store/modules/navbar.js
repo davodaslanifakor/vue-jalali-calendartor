@@ -1,4 +1,4 @@
-export const state = () => ({
+const state = () => ({
   listNavbar: [
 	{
 		text:'صفحه اصلی',
@@ -12,3 +12,8 @@ export const state = () => ({
   	}
   ],
 })
+
+export default {
+  state,
+}
+

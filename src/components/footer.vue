@@ -75,7 +75,7 @@ footer {
             transform: scale(2) !important;
           }
           &:hover {
-            color: #fff;
+            color:@blue;
           }
         }
       }

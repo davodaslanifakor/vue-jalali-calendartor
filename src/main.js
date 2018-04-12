@@ -1,17 +1,15 @@
 import Vue from 'vue'
-import App from './App.vue'
-import config from './config.js'
-import router from './routes'
+import App from '~/layouts/default.vue'
+import {store} from '~/store/store.js'
+import router from './routes.js'
+import Vuebar from 'vuebar';
 
+require("./css.js");
 
-// var materialdesigniconsCss = require('./assets/css/materialdesignicons.min.css')
-// var bootstrapRtl = require('./assets/css/bootstrap/bootstrap-rtl.css')
-// var webFont = require('./assets/css/web-font.css')
-
+Vue.use(Vuebar);
 new Vue({
-    el: '#app',
-    data: {
-    },
-    router,
-    render: h => h(App)
+  el: '#app',
+  store,
+  router,
+  render: h => h(App)
 })

@@ -1,12 +1,15 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from '~/layouts/default.vue'
+import Home from '~/pages/index.vue'
 import VueRouter from 'vue-router'
+import Meta from 'vue-meta'
 Vue.use(VueRouter)
+Vue.use(Meta)
 const routes = [
     {
         path: '/',
-        component: App,
-        name:dashbord,
+        component: Home,
+        meta:'dashbord'
         // children: [{
         //     path: '/service',
         //     component: Service,
@@ -19,7 +22,7 @@ const routes = [
 ]
 const router = new VueRouter({
     routes,
-    base: '/12347/',
+    base: '/web/',
     mode: 'history'
 })
 router.beforeEach((to, from, next) => {

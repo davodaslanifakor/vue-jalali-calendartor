@@ -4,7 +4,7 @@
       <div class="el2full" >
         <app-sidebar/>
         <div class="main-layout">
-          <nuxt/>
+          	<router-view></router-view>
         </div>
         <app-footer/>
       </div>
@@ -22,13 +22,13 @@ export default {
 },
 
 data(){
-  return {
-    defaultHeight:'700px'
+    return {
+      defaultHeight:'700px'
+    }
+  },
+  mounted(){
+    // this.defaultHeight = window.innerHeight - 338   +'px'
   }
-},
-mounted(){
-  // this.defaultHeight = window.innerHeight - 338   +'px'
-}
 }
 
 </script>

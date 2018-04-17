@@ -1,7 +1,7 @@
 <template>
  <div class="home">
         <!-- <router-view></router-view> -->
-    <app-calendar/>
+          <app-calendar/>
  </div>
 </template>
 

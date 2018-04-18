@@ -1,14 +1,14 @@
 <template>
   <div class="layout">
-    <div class="el1full" v-bar>
-      <div class="el2full" >
+    <!-- <div class="el1full" v-bar>
+      <div class="el2full" > -->
         <app-sidebar/>
         <div class="main-layout">
           	<router-view></router-view>
         </div>
         <app-footer/>
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -36,9 +36,9 @@ data(){
 
 body {
   margin: 0;
-  overflow: hidden;
-  padding: 0;
-  -webkit-overflow-scrolling: touch;
+  // overflow: hidden;
+  // padding: 0;
+  // -webkit-overflow-scrolling: touch;
 }
 .el1full {
   display: block;

@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import sidebar from '~/components/navbar.vue'
+import sidebar from '~/components/sidebar.vue'
 import footer from '~/components/footer.vue'
 export default {
  layout: 'default',
@@ -53,6 +53,6 @@ body {
 }
 .main-layout{
   padding: 10px 0;
-  min-height: 750px;
+  min-height: 1200px;
 }
 </style>

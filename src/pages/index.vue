@@ -1,12 +1,15 @@
 <template>
  <div class="home">
-        <router-view></router-view>
+        <!-- <router-view></router-view> -->
+    <app-calendar/>
  </div>
 </template>
 
 <script>
+import calendar from '~/components/calendar.vue'
 export default {
   components: {
+    'app-calendar':calendar
   },
   computed: {
   },

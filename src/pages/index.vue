@@ -22,20 +22,19 @@ export default {
   },
   mounted(){
     vm = this
-    return
-    axios({
-      method:'post',
-      url:'https://dev.tebinja.com/patient/doctor/calendarData',
-        data:{
-          start: 1532115000,
-          end: 1532719800,
-          clinicId: 1,
-          doctorId: 1,
-          visitId: 1,
-        },
-    }).then(res=>{
-      vm.slots = res.data.slots
-    })
+    // axios({
+    //   method:'post',
+    //   url:'https://dev.tebinja.com/patient/doctor/calendarData',
+    //     data:{
+    //       start: 1532115000,
+    //       end: 1532719800,
+    //       clinicId: 1,
+    //       doctorId: 1,
+    //       visitId: 1,
+    //     },
+    // }).then(res=>{
+    //   vm.slots = res.data.slots
+    // })
   }
 }
 </script>
